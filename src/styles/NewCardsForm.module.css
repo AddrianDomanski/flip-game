@@ -1,0 +1,25 @@
+.form-card-choice {
+    grid-column: -10/10;
+    grid-row: 3/4;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input {
+height: 30px;
+}
+
+.button {
+    border-radius: 10px;
+    border: none;
+    padding: 0.5rem;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    margin-top: 1rem;
+    background: linear-gradient(0deg, #5b3582, #1e004f);
+}

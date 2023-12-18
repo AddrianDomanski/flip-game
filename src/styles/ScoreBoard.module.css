@@ -1,0 +1,25 @@
+.score-board {
+    background: linear-gradient(0deg, #4a2a7f 20%, #000000 100%);
+    padding: 2rem 1rem;
+    grid-column: 11/13;
+    grid-row-start: 2;
+    align-self: start;
+}
+
+.score {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.betterResult {
+    color: green;
+}
+
+.worseResult {
+    color: red;
+}
+
+.neutralResult {
+    color: #dfed;
+}

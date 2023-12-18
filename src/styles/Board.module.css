@@ -1,0 +1,68 @@
+.board {
+  grid-column: 3/11;
+  grid-row: 2/3;
+
+  border-radius: 0 40px;
+  margin: 1rem;
+  padding: 2rem;
+  min-height: 50vh;
+  transition: width 0.1s ease-in-out;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, 150px);
+  background-color: #4a2a7f;
+  justify-content: center;
+  align-content: baseline;
+  align-items: center;
+}
+
+.resize-board {
+  transition: width 0.1s ease-in-out;
+  width: 80%;
+}
+
+
+.loading {
+  align-content: center;
+}
+
+.loadingCard {
+  margin: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  height: fit-content;
+  border-radius: 10px;
+  animation: cardLoading 2s ease-in-out infinite;
+}
+
+.loadingCardFront {
+  border-radius: 10px;
+  background: linear-gradient(45deg, #2c73d2 20%, #388ba6 100%);
+  backface-visibility: hidden;
+  width: 80px;
+  height: 120px;
+}
+
+.loadingCardBack {
+  border-radius: 10px;
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(45deg, #2cd292 20%, #38a68a 100%);
+  display: flex;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+}
+@keyframes cardLoading {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

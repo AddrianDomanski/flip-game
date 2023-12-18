@@ -1,0 +1,12 @@
+.game-state {
+  grid-column: 4/10;
+  grid-row: 1/2;
+  border-radius: 20px 0;
+  background: linear-gradient(45deg, #4a2a7f 20%, #000000 100%);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'Georgia', sans-serif;
+}
