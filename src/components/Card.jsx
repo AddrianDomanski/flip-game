@@ -1,8 +1,9 @@
 import { useState } from "react";
 import classes from "../styles/Card.module.css";
 import { useEffect } from "react";
+import { randomNumber } from "../utils/randomNumber";
 
-function Card({ card, onClicked }) {
+function Card({ card, onClicked, index }) {
   const [firstRender, setFirsRender] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -25,11 +26,12 @@ function Card({ card, onClicked }) {
       className={`${classes.card} ${isClicked ? classes.cardFlip : ""} ${
         firstRender ? classes["card-appearance"] : ""
       } ${card.isCompleted ? classes.completed : ""}`}
+      style={{ "--i": index * randomNumber(1, 2) }}
       onClick={handleClick}
     >
       <div className={classes.front}></div>
       <div className={classes.back}>
-        <img src={card.imageSrc} alt="x" />
+        <img src={card.imageSrc} alt="x"  draggable="false"/>
       </div>
     </div>
   );

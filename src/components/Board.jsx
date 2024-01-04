@@ -4,7 +4,7 @@ import Card from "./Card";
 function Board({ cards, onClicked, isLoading }) {
   return (
     
-    <div className={`${classes.board} ${isLoading? classes.loading: ""} ${cards.length > 10 ? classes["resize-board-x"] : ""}`}>
+    <div className={`${classes.board} ${isLoading? classes.loading: ""} ${cards.length > 10 ? classes["resize-board"] : ""}`}>
       {isLoading ? (
         <div className={classes.loadingCard}>
           <div className={classes.loadingCardFront}></div>
@@ -13,8 +13,8 @@ function Board({ cards, onClicked, isLoading }) {
       ) : (
         ""
       )}
-      {cards.map((card) => {
-        return <Card key={card.id} onClicked={onClicked} card={card} />;
+      {cards.map((card, index) => {
+        return <Card key={card.id} index = {index} onClicked={onClicked} card={card} />;
       })}
     </div>
   );
