@@ -1,15 +1,45 @@
 .score-board {
-    background: linear-gradient(0deg, #4a2a7f 20%, #000000 100%);
-    padding: 2rem 1rem;
+    background: #475979;
     grid-column: 11/13;
+    grid-row: 2/4;
+    padding: 1rem;
+    border-radius: 20px;
     grid-row-start: 2;
     align-self: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
 }
 
+.scores {
+    grid-column: 1/-1;
+    width: 100%;
+}
+.pairAmount {
+    grid-column: 1;
+    text-align: left;
+}
+
+.time {
+    grid-column: 2;
+    text-align: right;
+}
 .score {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: white;
+    display: grid;
+    border-width: 50%;
+    position: relative;
+    
+}
+
+.score::before {
+    content: "";
+    border: black 2px solid;
+    width: 100%;
+    position: absolute;
 }
 
 .betterResult {

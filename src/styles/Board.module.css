@@ -1,26 +1,28 @@
 .board {
   grid-column: 3/11;
   grid-row: 2/3;
-
-  border-radius: 0 40px;
+  border-radius: 50px;
   margin: 1rem;
+  min-height: 30vh;
+  height: max-content;
   padding: 2rem;
-  min-height: 50vh;
   transition: width 0.1s ease-in-out;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, 150px);
-  background-color: #4a2a7f;
   justify-content: center;
+  background-color: #ae7b65;
+  box-shadow: 0px 0px 30px #fbebae,10px 10px 40px #fbebae, 0px 0px 80px #bae1e5;
+
   align-content: baseline;
   align-items: center;
 }
 
 .resize-board {
   transition: width 0.1s ease-in-out;
-  width: 80%;
+  
 }
-
 
 .loading {
   align-content: center;
